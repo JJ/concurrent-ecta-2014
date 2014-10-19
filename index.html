@@ -4,22 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
 <title>Erlang GECCO 2013 presentation</title>
 <link href='http://fonts.googleapis.com/css?family=Alef|Telex' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="erlang.css" />
 </head>
 <!-- taken from http://www.sitepoint.com/pure-css3-paper-curls/ -->
 <body>
 
-<div id="impress"> <!-- impress.js presentation goes inside this -->
+<div id="preso"> <!-- impress.js presentation goes inside this -->
   
   <div class="step">
-    <h1>Adapting Evolutionary Algorithms to the Concurrent Functional Language Erlang</h1>
+    <h1>Implementing Parallel Genetic Algorithm Using Concurrent-Functional Languages</h1>
     <h2><span class='uci'>J. Albert Cruz</span>, 
-      <span class='ugr'><strong>J. J. Merelo</strong>, A. M. Mora and P. de las Cuevas</span></h2>
+      <span class='ugr'><strong>J. J. Merelo</strong>, L. Acevedo-Martínez and P. de las Cuevas</span></h2>
     <h3><a href='http://uci.cu'><span class='uci'>Universidad de Ciencias Informáticas, La
 	  Habana, Cuba</span></a> and <a
 					 href='http://ugr.es'><span class='ugr'>Universidad de Granada</span></a></h3>
     
-    <h3>Replay this presentation at <a href='http://canube.github.io/erlang-gecco2013'>http://goo.gl/jEZsJ</a></h3>
+    <h3>Replay this presentation at <a href='http://jj.github.io/concurrent-ecta-2014'>http://goo.gl/KBBeZs</a></h3>
     
   </div>
   
@@ -164,8 +165,9 @@
 
 </div> <!-- big div -->
 
-<script type="text/javascript" src="impress.js"></script>
-<script>impress().init();</script>
+<script type="text/javascript" src="jmpress.custom.js"></script>
+<script>$('#preso').jmpress({animation: {transitionDuration: '2s',
+					 transitionDelay:'1s'}});</script>
 
 </body>
 
