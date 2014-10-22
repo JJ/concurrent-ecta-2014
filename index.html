@@ -4,12 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
 <title>Erlang GECCO 2013 presentation</title>
 <link href='http://fonts.googleapis.com/css?family=Alef|Telex' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="erlang.css" />
+<link href="css/ppsn.css" rel="stylesheet" type="text/css" />
+<link href="css/basic-animations.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jmpress.js"></script>
+
+<!-- Code highlight -->
+<link rel="stylesheet" href="css/github.css">
+<script src="js/highlight.pack.js"></script>
+
+<link rel="stylesheet" type="text/css" href="ecta.css" />
 </head>
 <!-- taken from http://www.sitepoint.com/pure-css3-paper-curls/ -->
 <body>
 
-<div id="impress"> <!-- impress.js presentation goes inside this -->
+<div id="preso"> <!-- impress.js presentation goes inside this -->
   
   <div class="step">
     <h1>Adapting Evolutionary Algorithms to the Concurrent Functional Language Erlang</h1>
@@ -26,7 +36,7 @@
   <div class="step"  style='background-image: url(http://farm4.staticflickr.com/3048/3055159693_e2d6035d3d_b.jpg);height:600px'
        data-x='973.8819' data-z='-316.4334' data-rotate-y='36'>
 
-    <h2><span class='ugr'>Most people like object-oriented procedural languages</a></h2>
+    <h2><span class='ugr'>Most people like object-oriented or procedural languages</a></h2>
 
 <p class='image'>Image from <a href='http://www.flickr.com/photos/digimist/3055159693/'>Digimist</a></p>
 </div>
@@ -34,18 +44,20 @@
 <div class="step" 
      data-x='1802.315' data-z='-918.3255' data-rotate-y='72'
      style='background-image: url(http://farm8.staticflickr.com/7060/6957923679_094064e46e_b.jpg);height:600px'>
-  <h2><span class='uci'>Erlang is a functional language</span></h2>
+  <h2><span class='uci'>But the world is made of functions and threads</span></h2>
 
 <p class='image'>Image from <a href='http://www.flickr.com/photos/ymotongpoo/6957923679'>Yoshifumi Yamaguchi</a></p>
   </div>
 
 <div class="step" 
   data-x='1802.315' data-z='-1942' data-rotate-y='108'>
-  <h2>Functional languages are just different</h2>
+  <h2>Functional and concurrent languages are just different</h2>
 
   <ul>
-    <li>Actor pattern: Concurrency.</li>
-    Uses the functional paradigm for the design of applications.
+    <li><strong>Concurrency</strong>: Actors, agents, messages.</li>
+    <li><strong>Functions</strong>, lists.</li>
+  </ul>
+  <p>Scala, Erlang and Clojure are multi-paradigm languages.</p>
  </div>
 
 <div class="step" 
@@ -156,7 +168,7 @@
   href='https://github.com/CANUBE/erlang-gecco2013'>GitHub at http://git.io/lba-erl</a></h2>
 
   <h2>Follow us at <a
-  href='http://twitter.com/canubeproject'>@CANUBE</a> and <a
+  href='http://twitter.com/jjmereo'>@jjmerelo</a> and <a
   href='http://twitter.com/geneura'>@geneura</a> and <a href='http://twitter.com/jjmerelo'>@jjmerelo</a><h2>
 
       <h2>See you in <a href='http://evostar.org'>Baeza for EvoStar 2014</a>!</h2>
@@ -164,8 +176,11 @@
 
 </div> <!-- big div -->
 
-<script type="text/javascript" src="impress.js"></script>
-<script>impress().init();</script>
+<script>
+  $(function() {
+  $('#preso').jmpress();
+   });
+</script>
 
 </body>
 
