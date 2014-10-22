@@ -44,10 +44,10 @@ Languages</h1>
   </div>
 
 <div class="step" 
-  data-x='1802.315' data-z='-1942' data-rotate-y='108'     
+     data-x='1802.315' data-z='-1942' data-rotate-y='108'     
      style='background-image: url(https://farm7.staticflickr.com/6199/6059721344_56bae0936e_b_d.jpg)'>
   <h2 class='figures'>Functional and concurrent languages are just different</h2>
-
+  
   <ul>
     <li><strong>Concurrency</strong>: Actors, agents, messages.</li>
     <li><strong>Functions</strong>, lists.</li>
@@ -56,9 +56,9 @@ Languages</h1>
  </div>
 
 <div class="step" 
-  data-x='973.9' data-z='-2544' data-rotate-y='144'
-  style='background-image:url(http://farm1.staticflickr.com/32/60849408_11dd57992c_b.jpg);height:600px'
-  >
+     data-x='973.9' data-z='-2544' data-rotate-y='144'
+     style='background-image:url(http://farm1.staticflickr.com/32/60849408_11dd57992c_b.jpg);height:600px'
+     >
   <h2>Actors doing functions</h2>
 
   <ul><li>Actors are concurrent units of execution with a Lightweight life cycle.</li>
@@ -71,19 +71,19 @@ Languages</h1>
 </div>
 
 <div class="step" 
-       data-x='0' data-z='-2860' data-rotate-y='180'
-       style='background-image:url(http://farm9.staticflickr.com/8346/8224477844_ea0558eba8_b.jpg);height:600'>
-    
-    <h2 class='figures'>Research questions</h2>
+     data-x='0' data-z='-2860' data-rotate-y='180'
+     style='background-image:url(http://farm9.staticflickr.com/8346/8224477844_ea0558eba8_b.jpg);height:600'>
+  
+  <h2 class='figures'>Research questions</h2>
   
   <ul>
     <li>Can procedural/OO evolutionary algorithm models be translated to functional/concurrent languages?</li>
     <li>Which language yields the highest performance?</li>    
-    
-    <p class='image'>Image from <a href='http://www.flickr.com/photos/gsfc/8224477844'>NASA Goddard</a></p>
-  </div>
+  </ul>  
+  <p class='image'>Image from <a href='http://www.flickr.com/photos/gsfc/8224477844'>NASA Goddard</a></p>
+</div>
 
-  <div class="step" 
+<div class="step" 
   data-x='-973.9' data-z='-2544' data-rotate-y='216'>
 
     <h2>Concepts and their translation</h2>
@@ -93,7 +93,7 @@ Languages</h1>
       <tr><td>Population</td><td>List</td><td>List</td><td>Lazy list</td></tr>
       <tr><td>Runtime environment</td><td>Erlang VM</td><td>Java VM</td><td>Java VM</td></tr>
       <tr><td>Pool structure</td><td>ets</td><td>HashMap</td><td>hash-map</td></tr>
-
+    </table>
   </div>
 
    <div class="step" 
@@ -111,31 +111,25 @@ Languages</h1>
       </ul>
        <p class='image'>Image by <a
        href='http://www.flickr.com/photos/ivanplata/4783917971'>Ivan Plata</a>.</p>
-</div>
+   </div>
 
    <div class="step" 
-  data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'>
-  <h2>Results</h2>
+	data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'
+	style='background-image:url(https://farm6.staticflickr.com/5606/15505299296_38d1cffaae_k_d.jpg); height:600'>
+     <h2 class='figures'>Experiments</h2>
 
-     <table>
-       <tr><th>Clients</th><th>Assignments</th><th>Time (seconds)</th></tr>
-       <tr><td>25</td><td>3040</td><td>5.339950</td></tr>
- <tr><td>50</td><td>4301</td><td>7.891000</td></tr>
- <tr><td>100</td><td>5630</td><td>11.671210</td></tr>
-       </table>
+     <h3 class='figures'>Solving the MaxSAT problem</h3>
+     <ul><li>100 variables</li>
+       <li>5000 evaluations</li>
+     </ul>
+     <p class='image'>Image by <a href='https://www.flickr.com/photos/dianasch/15505299296'>Diana Robinson</a></p>
 </div>
 
  <div class="step" 
   data-x='-973.8819' data-z='-316.4334' data-rotate-y='324'>
   <h2>What gives?</h2>
 
-     <ul>
-       <li>Disappointing results.</li>
-       <li>Intra-actor concurrency rather low: pool communications in
-       a queue.</li>
-       <li>Different models shoud be tried: persistent pool,
-       non-Erlang pool... </li>
-       </ul>
+
 </div>
 
 <div class="step" 
