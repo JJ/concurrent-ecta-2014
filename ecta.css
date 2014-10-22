@@ -35,7 +35,7 @@ td,th {
  }
 
 h2{ 
-     font-size: 2em;
+     font-size: 3em;
      font-family: "Alef", sans-serif;
      color: DarkGray;
      background-color:rgba(250,240,230,0.5);
@@ -58,10 +58,18 @@ span.uci{
  }
 
 h2.figures { 
-        font-size: 2.5em;
+        font-size: 3.5em;
         font-family: "Alef", sans-serif;
         color: DarkSlateGray;  
         }
+
+h3.figures { 
+    background-color:rgba(250,240,230,0.5);
+    font-size: 1.5em;
+    font-family: "Alef", sans-serif;
+    color: DarkSlateGray;  
+}
+
 
 p {
     font-size: 2em;
@@ -81,6 +89,7 @@ p.image {
 {
 	position: relative;
 	width: 1024px;
+	height: 600px;
 	padding: 50px;
 	margin: 0 auto;
 	background-color: #FAF0E6;
