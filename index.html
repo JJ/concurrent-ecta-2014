@@ -121,32 +121,45 @@ Languages</h1>
      <h3 class='figures'>Solving the MaxSAT problem</h3>
      <ul><li>100 variables</li>
        <li>5000 evaluations</li>
+       <li>1..30 evaluators, 1..10 reproducers, #reproducers &lt; #evaluators </li>
      </ul>
      <p class='image'>Image by <a href='https://www.flickr.com/photos/dianasch/15505299296'>Diana Robinson</a></p>
 </div>
 
  <div class="step" 
   data-x='-973.8819' data-z='-316.4334' data-rotate-y='324'>
-  <h2>What gives?</h2>
+  <h2>Scala tops the scale</h2>
 
+  <table><tr><th>Language</th><th>Parallel time ± SD (ms)</th><th>Evaluators</th><th>Sequential time</th><th>Relative speedup</th></tr>
+    <tr><td>Erlang</td><td> 2920.40 ± 126</td><td>25</td><td>8143.3</td><td>2.78</td></tr>
+    <tr><td>Clojure</td><td> 1734.66 ± 28.32</td><td>10</td><td>3340.22</td><td>1.92</td></tr>
+    <tr><td>Scala</td><td> 563 ± 24.32</td><td>6</td><td>1651.8</td><td>2.86</td></tr>
+  </table>
 
 </div>
 
 <div class="step" 
   data-x='-973.8819' data-z='-316.4334' data-y='-800'
-  data-rotate-y='324'
-    style='background-image:url(http://farm5.staticflickr.com/4142/4782800980_8d790446ab_b.jpg);height:600'
-  >
-  <h2><span class='ugr'>Worth the while?</a></h2>
+  data-rotate-y='324'>
+  <h2>Results at a glance</h2>
 
-     <ul class='dark'>
-       <li>Nice introduction to a non-standard language.</li>
-       <li>But more of a stepping-stone to other languages: Scala, Go.</li>
-       <li>Combination with asynchronous event processing. </li>
-       </ul>
+  <img src='img/time-reps-vs-evaluators.png' alt='all solutions'  class="figure" >
+</div>
 
-       <p class='image'>Image by <a
-       href='http://www.flickr.com/photos/stuartherbert/4782800980/'>Stuart Hebert</a></p>
+<div class="step" 
+     data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'  data-y='-800'>
+  <h2>No more evaluators than strictly needed</h2>
+
+  <img src='img/delay-1-2-reps.png' alt='Solutions with 1-2 evals'  class="figure" >
+
+</div>
+
+ <div class="step" 
+     data-x='-1802.315' data-z='-1942' data-rotate-y='252' data-y='-800'>
+  <h2>Scala also rocks solutions</h2>
+
+  <img src='img/sols-reps-vs-evaluators.png' alt='Solutions with 1-2 evals'  class="figure" >
+
 </div>
 
 <div class="step" data-y='-800' data-rotate-y='360'>
