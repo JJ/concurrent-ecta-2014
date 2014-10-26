@@ -1,33 +1,35 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
-<title>Erlang GECCO 2013 presentation</title>
+<!DOCTYPE HTML>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8" />
+
+<title>Concurrent/functional EAs ECTA 2014 presentation</title>
 <link href='http://fonts.googleapis.com/css?family=Alef|Telex' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="erlang.css" />
+<script type="text/javascript" src="jmpress.custom.js"></script>
+<link rel="stylesheet" type="text/css" href="ecta.css" />
+
 </head>
-<!-- taken from http://www.sitepoint.com/pure-css3-paper-curls/ -->
+
 <body>
 
 <div id="preso"> <!-- impress.js presentation goes inside this -->
   
   <div class="step">
-    <h1>Implementing Parallel Genetic Algorithm Using Concurrent-Functional Languages</h1>
+    <h1>Implementing Parallel Genetic Algorithm Using Concurrent-Functional
+Languages</h1>
     <h2><span class='uci'>J. Albert Cruz</span>, 
-      <span class='ugr'><strong>J. J. Merelo</strong>, L. Acevedo-Mart�nez and P. de las Cuevas</span></h2>
-    <h3><a href='http://uci.cu'><span class='uci'>Universidad de Ciencias Inform�ticas, La
-	  Habana, Cuba</span></a> and <a
-					 href='http://ugr.es'><span class='ugr'>Universidad de Granada</span></a></h3>
+      <span class='ugr'><strong>J. J. Merelo</strong>, <span class='uci'>L. Acevedo</span> and <span class='ugr'>P. de las Cuevas</span></h2>
+    <h3><a href='http://uci.cu'><span class='uci'>Universidad de Ciencias Informáticas, La Habana, Cuba</span></a> and <a href='http://ugr.es'><span class='ugr'>Universidad de Granada</span></a></h3>
     
-    <h3>Replay this presentation at <a href='http://jj.github.io/concurrent-ecta-2014'>http://goo.gl/KBBeZs</a></h3>
+    <h3>Replay this presentation at <a href='http://jj.github.io/concurrent-lps-ecta2014'><code>http://goo.gl/KBBeZs</code></a></h3>
     
   </div>
   
   <div class="step"  style='background-image: url(http://farm4.staticflickr.com/3048/3055159693_e2d6035d3d_b.jpg);height:600px'
        data-x='973.8819' data-z='-316.4334' data-rotate-y='36'>
 
-    <h2><span class='ugr'>Most people like object-oriented procedural languages</a></h2>
+    <h2><span class='ugr'>Most people like object-oriented or procedural languages</a></h2>
 
 <p class='image'>Image from <a href='http://www.flickr.com/photos/digimist/3055159693/'>Digimist</a></p>
 </div>
@@ -35,139 +37,183 @@
 <div class="step" 
      data-x='1802.315' data-z='-918.3255' data-rotate-y='72'
      style='background-image: url(http://farm8.staticflickr.com/7060/6957923679_094064e46e_b.jpg);height:600px'>
-  <h2><span class='uci'>Erlang is a functional language</span></h2>
+  <h2><span class='uci'>But the world is made of functions and threads</span></h2>
 
 <p class='image'>Image from <a href='http://www.flickr.com/photos/ymotongpoo/6957923679'>Yoshifumi Yamaguchi</a></p>
   </div>
 
 <div class="step" 
-  data-x='1802.315' data-z='-1942' data-rotate-y='108'>
-  <h2>Functional languages are just different</h2>
-
+     data-x='1802.315' data-z='-1942' data-rotate-y='108'     
+     style='background-image: url(https://farm7.staticflickr.com/6199/6059721344_56bae0936e_b_d.jpg)'>
+  <h2 class='figures'>Functional and concurrent languages are just different</h2>
+  
   <ul>
-    <li>Actor pattern: Concurrency.</li>
-    Uses the functional paradigm for the design of applications.
+    <li><strong>Concurrency</strong>: Actors, agents, messages.</li>
+    <li><strong>Functions</strong>, lists.</li>
+  </ul>
+  <h3 class='figures'>Scala, Erlang and Clojure are multi-paradigm languages.</h3>
  </div>
 
 <div class="step" 
-  data-x='973.9' data-z='-2544' data-rotate-y='144'
-  style='background-image:url(http://farm1.staticflickr.com/32/60849408_11dd57992c_b.jpg);height:600px'
-  >
-  <h2>Actors: concurrent units of execution</h2>
+     data-x='973.9' data-z='-2544' data-rotate-y='144'
+     style='background-image:url(http://farm1.staticflickr.com/32/60849408_11dd57992c_b.jpg);height:600px'
+     >
+  <h2>Actors doing functions</h2>
 
-  <ul><li>Implemented as processes in the Erlang VM.</li>
-  <li>Lightweight life cycle.</li>
-  <li>Using immutable messages.</li>
+  <ul><li>Actors are concurrent units of execution with a Lightweight life cycle.</li>
+    <li>Actors/agents use immutable messages.</li>
+    <li>Functions are the main concept in functional languages.</li>
+    <li>Functional languages have efficient implementation of lists.</li>
+    <li>And they use high order functions.</li>
   </ul>
   <p class='image'>Image from <a href='http://www.flickr.com/photos/happeningfish/60849408/'>Happenningfish</a></p>
 </div>
 
-  <div class="step" 
-  data-x='0' data-z='-2860' data-rotate-y='180'
-    style='background-image:url(http://farm9.staticflickr.com/8346/8224477844_ea0558eba8_b.jpg);height:600'>
-    
-  <h2><span class='ugr'>Functions as the main concept</a></h2>
-
-    <ul>
-      <li>Efficient implementation of lists.</li>
-      <li>Use of high order functions.</li>
-      <li>Macro system.</li>
-      </ul>
-
-      <p class='image'>Image from <a href='http://www.flickr.com/photos/gsfc/8224477844'>NASA Goddard</a></p>
+<div class="step" 
+     data-x='0' data-z='-2860' data-rotate-y='180'
+     style='background-image:url(http://farm9.staticflickr.com/8346/8224477844_ea0558eba8_b.jpg);height:600'>
+  
+  <h2 class='figures'>Research questions</h2>
+  
+  <ul>
+    <li>Can procedural/OO evolutionary algorithm models be translated to functional/concurrent languages?</li>
+    <li>Which language yields the highest performance?</li>    
+  </ul>  
+  <p class='image'>Image from <a href='http://www.flickr.com/photos/gsfc/8224477844'>NASA Goddard</a></p>
 </div>
 
 <div class="step" 
   data-x='-973.9' data-z='-2544' data-rotate-y='216'>
-  <h2>Using a pool-based algorithm</h2>
 
-    <ul>
-      <li>A pool is an actor.</li>
-      <li>The client is an actor requesting individuals from the pool
-      and returning them.</li>
-      <li>Separation of architecture and problem encoding; fitness,
-      operators, selection criteria, replacement policy:
-      <em>injected</em> into the pool.</li>
-      </ul>
-</div>
+    <h2>Concepts and their translation</h2>
+
+    <table><tr><th>Concept</th><th>Erlang</th><th>Scala</th><th>Clojure</th></tr>
+      <tr><td>Chromosome</td><td>List</td><td>List</td><td>Vector</td></tr>
+      <tr><td>Population</td><td>List</td><td>List</td><td><a href='http://ndpar.blogspot.it/2011/02/lazy-lists-in-groovy.html'>Lazy list</a></td></tr>
+      <tr><td>Runtime environment</td><td>Erlang VM</td><td>Java VM</td><td>Java VM</td></tr>
+      <tr style='background:lightGray'><td>Pool structure</td><td>ets</td><td>HashMap</td><td>hash-map</td></tr>
+    </table>
+  </div>
 
    <div class="step" 
      data-x='-1802.315' data-z='-1942' data-rotate-y='252'
     style='background-image:url(http://farm5.staticflickr.com/4077/4783917971_cf2c61e668_b.jpg);height:600'
      >
-  <h2><span class='uci'>A few experiments</a></h2>
+      <h2 class='figures'>Switching to a pool-based algorithm</h2>
 
-     <ul>
-       <li>Which you can download from <a
-       href='https://github.com/jalbertcruz/erlEA/'>GitHub</a>.</li>
-       <li>Using the <code>maxones</code> problem.</li>
-       <li>Incrementing the number of clients.</li>
-       </ul>
-
+      <ul>
+	<li>A pool is an actor.</li>
+	<li>The client is an actor requesting individuals from the pool
+	  and returning them.</li>
+	<li>Separation of architecture and problem encoding.</li>
+	<li>Clients can evaluate or reproduce.</li>
+      </ul>
        <p class='image'>Image by <a
        href='http://www.flickr.com/photos/ivanplata/4783917971'>Ivan Plata</a>.</p>
-</div>
+   </div>
 
    <div class="step" 
-  data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'>
-  <h2>Results</h2>
+	data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'
+	style='background-image:url(https://farm6.staticflickr.com/5606/15505299296_38d1cffaae_k_d.jpg); height:600'>
+     <h2 class='figures'>Experiments</h2>
 
-     <table>
-       <tr><th>Clients</th><th>Assignments</th><th>Time (seconds)</th></tr>
-       <tr><td>25</td><td>3040</td><td>5.339950</td></tr>
- <tr><td>50</td><td>4301</td><td>7.891000</td></tr>
- <tr><td>100</td><td>5630</td><td>11.671210</td></tr>
-       </table>
+     <h3 class='figures'>Solving the MaxSAT problem</h3>
+     <ul><li>100 variables</li>
+       <li>5000 evaluations</li>
+       <li>1..30 evaluators, 1..10 reproducers, #reproducers &lt; #evaluators </li>
+     </ul>
+     <p class='image'>Image by <a href='https://www.flickr.com/photos/dianasch/15505299296'>Diana Robinson</a></p>
 </div>
 
  <div class="step" 
   data-x='-973.8819' data-z='-316.4334' data-rotate-y='324'>
-  <h2>What gives?</h2>
+  <h2>Scala tops the scale</h2>
 
-     <ul>
-       <li>Disappointing results.</li>
-       <li>Intra-actor concurrency rather low: pool communications in
-       a queue.</li>
-       <li>Different models shoud be tried: persistent pool,
-       non-Erlang pool... </li>
-       </ul>
+  <table><tr><th>Language</th><th>Parallel time ± SD (ms)</th><th>Evaluators</th><th>Sequential time</th><th>Relative speedup</th></tr>
+    <tr><td>Erlang</td><td> 2920.40 ± 126</td><td>25</td><td>8143.3</td><td>2.78</td></tr>
+    <tr><td>Clojure</td><td> 1734.66 ± 28.32</td><td>10</td><td>3340.22</td><td>1.92</td></tr>
+    <tr><td>Scala</td><td> 563 ± 24.32</td><td>6</td><td>1651.8</td><td>2.86</td></tr>
+  </table>
+
 </div>
 
 <div class="step" 
-  data-x='-973.8819' data-z='-316.4334' data-y='-600'
-  data-rotate-y='324'
-    style='background-image:url(http://farm5.staticflickr.com/4142/4782800980_8d790446ab_b.jpg);height:600'
-  >
-  <h2><span class='ugr'>Worth the while?</a></h2>
+  data-x='-973.8819' data-z='-316.4334' data-y='-800'
+  data-rotate-y='324'>
+  <h2>Results at a glance</h2>
 
-     <ul class='dark'>
-       <li>Nice introduction to a non-standard language.</li>
-       <li>But more of a stepping-stone to other languages: Scala, Go.</li>
-       <li>Combination with asynchronous event processing. </li>
-       </ul>
-
-       <p class='image'>Image by <a
-       href='http://www.flickr.com/photos/stuartherbert/4782800980/'>Stuart Hebert</a></p>
+  <img src='img/time-reps-vs-evaluators.png' alt='all solutions'  class="figure" >
 </div>
 
-<div class="step" data-y='-600' data-rotate-y='360'>
-  <a href="https://github.com/CANUBE/erlang-gecco2013"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
-  <h1>Adapting Evolutionary Algorithms to the Concurrent Functional Language Erlang</h1>
+<div class="step" 
+     data-x='-1802.315' data-z='-918.3255' data-rotate-y='288'  data-y='-800'>
+  <h2>No more evaluators than strictly needed</h2>
+
+  <img src='img/delay-1-2-reps.png' alt='Solutions with 1-2 evals'  class="figure" >
+
+</div>
+
+ <div class="step" 
+     data-x='-1802.315' data-z='-1942' data-rotate-y='252' data-y='-800'>
+  <h2>Scala also rocks solutions</h2>
+
+  <img src='img/sols-reps-vs-evaluators.png' alt='Solutions with 1-2 evals'  class="figure" >
+
+</div>
+
+<div class="step" 
+  data-x='-973.9' data-z='-2544' data-rotate-y='216' data-y='-800'>
+    <h2>Reaching some conclusions</h2>
+
+    <ul>
+      <li>Functional/Concurrent languages are *natural* for evolutionary algorithms</li>
+      <li>Scalability and raw speed vary...</li>
+      <li>... But Java VM based languages are faster.</li>
+      <li><em><strong>Scala</strong></em> seems to be faster and largest speed-up...</li>
+      <li>... but scalability is the smallest.</li>
+    </ul>
+</div>
+
+<div class="step" 
+     data-x='1802.315' data-z='-1942' data-rotate-y='108'  data-y='-800'>
+    <h2>Why Scala</h2>
+    
+    <ul>
+      <li>Java VM?</li>
+      <li>Pure concurrent model?</li>
+      <li>Non-lazy lists?</li>
+    </ul>
+</div>
+
+<div class="step" 
+     data-x='1802.315' data-z='-918.3255' data-rotate-y='72' data-y='-800'
+     style='background-image: url(https://farm4.staticflickr.com/3559/3693664490_6f4003f729_o_d.jpg);height:600px'>
+
+  <h2 class='figures'>Open source your science!</h2>
+
+  <h3 class='figures'>All source is available with a GPL license at <a href='http://github.com/jalbertcruz'><code>http://github.com/jalbertcruz</code></a></h3>
+
+  <p class='image'>Image from <a href='https://www.flickr.com/photos/manoj_mohan/3693664490'>Manoj Mohan</a></p>
+</div>
+
+<div class="step" data-y='-800' data-rotate-y='360'>
+  <a href="https://github.com/JJ/concurrent-ecta-2014"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
+  <h2>Thanks a lot for your attention</h2>
   <h2>This presentation available from <a
-  href='https://github.com/CANUBE/erlang-gecco2013'>GitHub at http://git.io/lba-erl</a></h2>
+					  href='https://github.com/JJ/concurrent-ecta-2014'>GitHub at <code>http://git.io/clp-ecta</code></a></h2>
 
   <h2>Follow us at <a
-  href='http://twitter.com/canubeproject'>@CANUBE</a> and <a
   href='http://twitter.com/geneura'>@geneura</a> and <a href='http://twitter.com/jjmerelo'>@jjmerelo</a><h2>
 
-      <h2>See you in <a href='http://evostar.org'>Baeza for EvoStar 2014</a>!</h2>
 </div>
 
 </div> <!-- big div -->
 
-<script type="text/javascript" src="jmpress.custom.js"></script>
-<script>$('#preso').jmpress({animation: {transitionDuration: '2s',
-					 transitionDelay:'1s'}});</script>
+<script>
+  $(function() {
+  $('#preso').jmpress();
+   });
+</script>
 
 </body>
 
